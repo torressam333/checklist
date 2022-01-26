@@ -13,6 +13,12 @@ MongoClient.connect(
         if (error) return console.log('Unable to connect to db: ' + error);
 
         //Only run on successful connection
-        console.log('connected...woooo');
+        const database = client.db(databaseName);
+
+        //Insert simple document into users collection (table)
+        database.collection('users').insertOne({
+            name: 'Sam Torres',
+            age: 29,
+        });
     }
 );
