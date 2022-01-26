@@ -1,7 +1,7 @@
 const mongodb = require('mongodb');
 
-//client
-const MongoClient = mongodb.MongoClient;
+//client & objectId
+const { MongoClient, ObjectId } = mongodb;
 const connectionUrl = 'mongodb://127.0.0.1:27017';
 const databaseName = 'checklist';
 
