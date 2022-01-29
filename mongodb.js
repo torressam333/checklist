@@ -40,18 +40,6 @@ MongoClient.connect(
                 console.log(users);
             });
 
-        // //Return count if items returned
-        database
-            .collection('users')
-            .find({ age: 29 })
-            .count((error, count) => {
-                const validate = validateItems(error, count);
-
-                if (validate === undefined) return;
-
-                console.log(count);
-            });
-
         //Return last task in collection by ID
         database
             .collection('tasks')
